@@ -2,4 +2,5 @@
     <string name="app_name">Tarefa3</string>
     <string name="questao_1">Questão 1</string>
     <string name="questao_2">Questão 2</string>
+    <string name="nome">Nome:</string>
 </resources>
