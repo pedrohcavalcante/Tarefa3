@@ -2,5 +2,10 @@
     <string name="app_name">Tarefa3</string>
     <string name="questao_1">Questão 1</string>
     <string name="questao_2">Questão 2</string>
-    <string name="nome">Nome:</string>
+    <string name="nome">Nome: </string>
+    <string name="sexo">Sexo</string>
+    <string name="masculino">Masculino</string>
+    <string name="feminino">Feminino</string>
+    <string name="btn_exibir">Exibir</string>
+    <string name="btn_limpar">Limpar</string>
 </resources>

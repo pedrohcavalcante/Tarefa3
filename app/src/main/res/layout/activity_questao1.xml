@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context="com.example.pedrohenrique.tarefa3.Questao1">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/nome_str"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:background="@color/colorPrimary"
         android:text="@string/nome"
         android:textColor="@android:color/background_light" />
 
-    <!--<LinearLayout
-        android:orientation="vertical"
+    <LinearLayout
         android:id="@+id/nome_linlay_input"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">-->
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/input_nome"
@@ -28,6 +25,130 @@
             android:hint="@string/nome"
             android:inputType="text" />
 
-    <!--</LinearLayout>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sexo_linlay_str"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sexo_str"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:isScrollContainer="true"
+            android:text="@string/sexo"
+            android:textColor="@android:color/background_light" />
+
+    </LinearLayout>
+
+
+        <RadioGroup
+
+            android:id="@+id/group_sexo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdo_masculino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/masculino"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/rdo_feminino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/feminino"
+                android:onClick="onRadioButtonClicked"/>
+
+        </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+
+            android:id="@+id/btn_exibir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="exibir"
+            android:text="@string/btn_exibir" />
+
+        <Button
+
+            android:id="@+id/btn_limpar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="limpar"
+            android:text="@string/btn_limpar" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nome_view_str"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nome"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/nome_str_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sex_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/sexo"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/sexo_str_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </LinearLayout>
