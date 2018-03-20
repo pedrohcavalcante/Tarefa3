@@ -37,37 +37,47 @@ public class Questao1 extends Activity {
 
         nome_str = findViewById(R.id.nome_input_view);
         nome_view = findViewById(R.id.nome_view_str);
-        //nome_view.setVisibility(View.INVISIBLE);
+        nome_view.setVisibility(View.INVISIBLE);
 
         sexo_view = findViewById(R.id.sexo_view_str);
-        //sexo_view.setVisibility(View.INVISIBLE);
+        sexo_view.setVisibility(View.INVISIBLE);
         sexo_str = findViewById(R.id.sexo_input_view);
     }
 
     public void exibir(View view){
-
-        //nome_str.setVisibility(View.VISIBLE);
-        //sexo_str.setVisibility(View.VISIBLE);
-
-        //sexo_view.setVisibility(View.VISIBLE);
-        //nome_view.setVisibility(View.VISIBLE);
-
-        sexo_view.setText(valor_sexo);
-        nome_view.setText(nome.getText());
         
-        if(radio_feminino.isChecked()){
+        if (nome.getText().length() == 0){
+            Toast.makeText(this, "Nome não inserido", Toast.LENGTH_SHORT).show();
+        } else if(!radio_masculino.isChecked() && !radio_feminino.isChecked()){
+            Toast.makeText(this, "Opção não encontrada", Toast.LENGTH_SHORT).show();
+        } else {
+
+            nome_str.setVisibility(View.VISIBLE);
+            sexo_str.setVisibility(View.VISIBLE);
+
+            sexo_view.setVisibility(View.VISIBLE);
+            nome_view.setVisibility(View.VISIBLE);
+
+            sexo_str.setText(" " + valor_sexo);
+            nome_str.setText(" " + nome.getText());
+        
+        /*if(radio_feminino.isChecked()){
             valor_sexo = "Feminino";
         }else if (radio_masculino.isChecked()){
             valor_sexo = "Masculino";
         }else{
             Toast.makeText(this, "Erro", Toast.LENGTH_SHORT).show();
+        }*/
         }
-
 
     }
 
     public void limpar(View view){
+        nome_str.setVisibility(View.INVISIBLE);
+        sexo_str.setVisibility(View.INVISIBLE);
 
+        sexo_view.setVisibility(View.INVISIBLE);
+        nome_view.setVisibility(View.INVISIBLE);
     }
 
     public void onRadioButtonClicked(View view){
@@ -77,11 +87,15 @@ public class Questao1 extends Activity {
             case R.id.rdo_masculino:
                 if (checar){
                     valor_sexo = "Masculino";
+                } else {
+                    Toast.makeText(this, "Opção não selecionada", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.rdo_feminino:
                 if (checar){
                     valor_sexo = "Feminino";
+                } else {
+                    Toast.makeText(this, "Opção não selecionada", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
