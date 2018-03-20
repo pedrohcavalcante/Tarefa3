@@ -30,10 +30,16 @@ public class Questao1 extends Activity {
         grp_radio = findViewById(R.id.group_sexo);
         nome_view = findViewById(R.id.nome_str_view);
         sexo_view = findViewById(R.id.sexo_str_view);
+        nome_str = findViewById(R.id.nome_view_str);
+        sexo_str = findViewById(R.id.sexo_str_view);
     }
 
     public void exibir(View view){
-        
+        nome_str.setVisibility(View.VISIBLE);
+        sexo_str.setVisibility(View.VISIBLE);
+        sexo_view.setVisibility(View.VISIBLE);
+        sexo_view.setText(valor_sexo);
+
     }
 
     public void limpar(View view){
