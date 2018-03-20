@@ -26,6 +26,8 @@ public class MainActivity extends Activity {
     }
 
     public void funcQuestao2(View view){
+        Intent questao2 = new Intent(getApplicationContext(), Questao2.class);
+        startActivity(questao2);
 
     }
 }
